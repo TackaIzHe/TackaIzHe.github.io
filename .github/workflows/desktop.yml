@@ -5,10 +5,20 @@ on:
     branches:
       - main
 
+
+
 jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v2
+      - name: 🔎 Check IP
+        run: curl https://api.ipify.org
+        
   hello-world:
     runs-on: ubuntu-latest
-
+        
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -25,6 +35,13 @@ jobs:
       - name: Restore dependencies
         timeout-minutes: 1
         run: dotnet run
+  qw:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v2
+      - name: 🔎 Check IP
+        run: curl https://api.ipify.org
         
   hello:
     runs-on: ubuntu-latest
