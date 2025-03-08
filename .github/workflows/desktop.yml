@@ -2,32 +2,24 @@ name: Simple Workflow
 
 on:
   push:
-    branches:
+    branches: 
       - main
-
-
-
 jobs:        
   hello-world:
     runs-on: ubuntu-latest
         
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Print Hello World
-        run: echo "Hello, World!"
       - uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
-        timeout-minutes: 1
-      - name: 🛒 Checkout
-        uses: actions/checkout@v2
       - name: 🔎 Check IP
         run: curl https://api.ipify.org
+      - name: 🔎 Check IPlocal
+        run: curl https://api.ipify.org
       - name: start server
+        timeout-minutes: 1
         run: dotnet run
 
         
