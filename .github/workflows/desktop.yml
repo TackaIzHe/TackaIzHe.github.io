@@ -1,14 +1,17 @@
-name: GitHub Actions
-on: 
+name: Simple Workflow
+
+on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+
 jobs:
-  stale:
+  hello-world:
     runs-on: ubuntu-latest
 
-    permissions:
-      issues: write
-      pull-requests: write
-
     steps:
-      - uses: actions/stale@v9
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Print Hello World
+        run: echo "Hello, World!"
