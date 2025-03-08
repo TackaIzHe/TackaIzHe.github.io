@@ -15,9 +15,11 @@ jobs:
 
       - name: Print Hello World
         run: echo "Hello, World!"
-      - name: mkdir
-        run: mkdir "hello"
-      - name: qw
-        run: cd "hello"
-      - name: qew
-        run: touch "hello.txt"
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore dependencies
+        run: dotnet run
+      
