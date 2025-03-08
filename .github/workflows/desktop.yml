@@ -36,7 +36,7 @@ jobs:
 
       - name: Allow Security group rule to connect Github Actions to Mongo-port
         run: |
-          aws ec2 authorize-security-group-ingress --group-name sg-mongo-from-github --protocol tcp --port 27017 --cidr $/32
+          aws ec2 authorize-security-group-ingress --group-name your-security-group-name --protocol tcp --port 80 --cidr 0.0.0.0/0
 
       - name: Build with Gradle
         run: ./gradlew build
