@@ -23,8 +23,9 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Restore dependencies
-        run: dotnet run
         timeout-minutes: 1
+        run: dotnet run
+        
   hello:
     runs-on: ubuntu-latest
 
