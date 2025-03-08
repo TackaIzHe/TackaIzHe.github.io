@@ -22,4 +22,10 @@ jobs:
           dotnet-version: 8.0.x
       - name: Restore dependencies
         run: dotnet run
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: q52
+        run: echo "qwe"
       
