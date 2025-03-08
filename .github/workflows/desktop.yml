@@ -26,10 +26,10 @@ jobs:
           dotnet-version: 8.0.x
       - name: Restore dependencies
         timeout-minutes: 1
-      - name: 🛒 Checkout
-        uses: actions/checkout@v2
-      - name: 🔎 Check IP
-        run: curl https://api.ipify.org
+      # - name: 🛒 Checkout
+      #   uses: actions/checkout@v2
+      # - name: 🔎 Check IP
+      #   run: curl https://api.ipify.org
       - name: start server
         run: dotnet run
 
