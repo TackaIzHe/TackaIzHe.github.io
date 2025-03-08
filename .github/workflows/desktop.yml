@@ -15,3 +15,9 @@ jobs:
 
       - name: Print Hello World
         run: echo "Hello, World!"
+      - name: mkdir
+        run: mkdir "hello"
+      - name: qw
+        run: cd "hello"
+      - name: qew
+        run: touch "hello.txt"
