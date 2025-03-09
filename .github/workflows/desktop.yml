@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
+      - name: chmod
+        run: chmod +x hello.txt
       - name: git push
         run: touch qwe.txt
       - name: qwe
