@@ -9,17 +9,19 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
-      - name: qwe
-        run: touch "qwe.txt"
-      - name: ls
-        run: ls
       - uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
-      - name: 🔎 Check IP
-        run: curl https://api.ipify.org
+      - name: git push
+        run: touch qwe.txt
+      - name: qwe
+        run: echo "qwe">>qwe.txt
+      - name: git
+        run: ./qwe.txt
+      # - name: 🔎 Check IP
+      #   run: curl https://api.ipify.org
       - name: start server
         timeout-minutes: 1
         run: dotnet run
