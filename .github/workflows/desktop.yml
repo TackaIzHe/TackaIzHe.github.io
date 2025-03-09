@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
+      - name: qwe
+        run: touch "qwe.txt"
       - uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -26,23 +28,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Public IP
-        id: ip
-        uses: haythem/public-ip@v1.2
-
-      - name: Print Public IP
-        run: |
-          echo id
-
-      - name: Allow Security group rule to connect Github Actions to Mongo-port
-        run: |
-          aws ec2 authorize-security-group-ingress --group-name your-security-group-name --protocol tcp --port 80 --cidr 0.0.0.0/0
-
-      - name: Build with Gradle
-        run: ./gradlew build
-
-      - name: Deny Security group rule to connect Github Actions to Mongo-port
-        run: |
-          aws ec2 revoke-security-group-ingress --group-name sg-mongo-from-github --protocol tcp --port 27017 --cidr $/32
-        if: always()
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: cd
+        run: cd
       
