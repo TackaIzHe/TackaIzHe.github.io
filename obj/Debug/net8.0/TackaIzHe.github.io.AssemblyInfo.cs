@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TackaIzHe.github.io")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbddc419ecad3ec65ad137139172b242f999f3f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+125f89eef67954cd8f6b2d2154ba566ea02ebe1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TackaIzHe.github.io")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TackaIzHe.github.io")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
