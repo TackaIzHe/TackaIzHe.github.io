@@ -9,33 +9,11 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
-      - uses: actions/checkout@v4
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.0.x
       - name: git push
         run: touch qwe.txt
       - name: qwe
         run: echo "qwe">>qwe.txt
       - name: git
         run: ./qwe.txt
-      # - name: 🔎 Check IP
-      #   run: curl https://api.ipify.org
-      - name: start server
-        timeout-minutes: 1
-        run: dotnet run
 
-        
-  hello:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.0.x
-      - name: cd
-        run: ls
       
