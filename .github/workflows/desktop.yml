@@ -3,7 +3,7 @@ name: Simple Workflow
 on:
   push:
     branches: 
-      - develop
+      - main
 jobs:        
   hello-world:
     runs-on: ubuntu-latest
@@ -16,6 +16,6 @@ jobs:
       - name: qwe
         run: echo "qwe">>qwe.txt
       - name: git
-        run: ./qwe.txt
+        run: ./hello.txt
 
       
