@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: qwe
         run: touch "qwe.txt"
+      - name: ls
+        run: ls
       - uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
