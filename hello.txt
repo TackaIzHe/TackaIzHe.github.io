@@ -1,1 +1,6 @@
-
+#!/bin/bash
+echo 52
+git checkout -b develop
+git add .
+git commit -m "52"
+git push origin develop
